@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{%  block section %}
+   	<h2>category</h2>
+   	<hr>
+{% endblock section %}
+
+{% block maincontent %}
+
+
+	<DIV>
+	
+	   {% for c in object_list %}
+    	  <a href="{% url 'category-detail' c.pk %}">
+      		{{c.name}}
+      	</a>
+ 		{% endfor %}   
+ 	</DIV>
+ {% endblock maincontent %}		
+
+
+<center>
+<h1> ALBUM </h1>
+<H2>CATEGORY</H2>
+</center>
